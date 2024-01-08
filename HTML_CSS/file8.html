@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Text with Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .block1{
+            display: block;
+            border: 1px solid blue;
+            font-size: 20px;
+            width: 40%;
+            height: 200px;
+        }
+        .block2{
+            position: relative;
+            top:20px;
+            left: 50px;
+            display: block;
+            width: 40%;
+            height: 200px;
+            font-size: 20px;
+            background-color: yellow;
+            border: 1px solid red;            
+        }
+        .block3{
+            position: relative;
+            top:50px;
+            display: block;
+            width: 40%;
+            height: 200px;
+            font-size: 20px;
+            background-color: aqua;
+            border: 1px solid red;            
+        }
+        .block3Child{
+            position: absolute;
+            top:100px;
+            left:100px;
+            display: block;
+            width: 40%;
+            height: 50px;
+            font-size: 20px;
+            background-color: burlywood;
+            border: 1px solid red;            
+        }
+        .block4{
+            position: fixed;
+            background-color: yellowgreen;
+
+        }
+    </style>
+</head>
+<body>
+      <div class="block1">This is block1</div>  
+      <div class="block2">This is block2 with relative position from left and top</div>
+      <div class="block3">This is block3 
+        <div class="block3Child"> This is block 3 child with absolute position</div>
+      </div>
+      <div class="block4">This is block4 with position fixed</div>  
+</body>
+</html>

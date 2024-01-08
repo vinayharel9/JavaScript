@@ -1,0 +1,15 @@
+
+const person = {
+    getDetails : function(city, country)
+    {
+        return this.firstName + ' ' +this.lastName + ' ' + city + ' ' +country;
+    }
+}
+
+const student = {
+    firstName : 'vinay',
+    lastName : "harel"
+}
+
+//The apply() method takes arguments as an array.
+console.log(person.getDetails.apply(student,['pune','india']));

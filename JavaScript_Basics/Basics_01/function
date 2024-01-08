@@ -1,0 +1,77 @@
+function example()
+{
+    console.log("this is code");
+}
+
+example();
+
+//anonymous function (a function without a name)
+//A JavaScript function can also be defined using an expression. A function expression can be stored in a variable
+//After a function expression has been stored in a variable, the variable can be used as a function:
+let x = function (x,y){ return x + y;}
+
+console.log('addition of two numbers is '+ x(4,5));
+
+//Functions can also be defined with a built-in JavaScript function constructor called Function().
+
+const func = new Function('a','b', 'return a*b'); //same as => const func = function (a, b) {return a * b};
+
+console.log(func(4,5));
+
+//function hoisting
+//Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope. 
+//Hoisting applies to variable declarations and to function declarations.
+//Because of this, JavaScript functions can be called before they are declared
+//Functions defined using an expression are not hoisted.
+
+console.log(myFunctionHoisting(5));
+
+function myFunctionHoisting(y) {
+  return y * y;
+}
+
+//self invoking function 
+(function(){console.log("hello this is self invoked function");})();
+
+//arrow function 
+let p = (a,b) => a*b;
+
+console.log(p(6,8));
+
+//default parameter values
+
+function multiply(a,b=5)
+{
+    return a*b;
+}
+
+console.log(multiply(8));
+
+//function rest parameter
+
+function sumFunction(...numbs)
+{
+    let sum=0;
+    for(let num of numbs)
+    {
+        sum+=num;
+    }
+    return sum;
+}
+
+console.log(sumFunction(1,2,3,4,5,6,7,8,9));
+
+//arguments object
+
+function sumFunc()
+{
+    let sum = 0;
+    for(let i=0;i<arguments.length;i++)
+    {
+         sum+=arguments[i];
+    }
+    return sum;
+}
+
+let ar = sumFunc(1,2,3,4,5);
+console.log(ar);

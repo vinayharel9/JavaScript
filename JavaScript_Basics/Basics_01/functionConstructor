@@ -1,0 +1,34 @@
+
+//Object Constructor - blueprint" for creating many objects of the same "type".
+function Person(first, last, age)
+{
+    this.first = first;
+    this.last = last;
+    this.age = age;
+    this.displayName = function()
+    {
+        return this.first+' '+this.last;
+    }
+}
+
+const myName = new Person('vinay','harel',28);
+console.log(myName.first);
+console.log(myName.displayName());
+
+//We can add additional properties in the object
+myName.city = 'pune';
+myName.displayCity = function(){return this.first + ' from city '+ this.city};
+console.log(myName.city);
+console.log(myName.displayCity());
+
+//we can add properties and functions to a function constructor using prototype keyword - this will be applied to all object which calls the function contructor Person
+
+Person.prototype.nationality = 'indian';
+Person.prototype.displayInfo = function(){ return this.age+' '+' '+this.nationality}
+
+console.log(myName.nationality);
+console.log(myName.displayInfo());
+
+const myName2 = new Person('vinay2','harel2',282);
+console.log(myName2.nationality);
+console.log(myName2.displayInfo());

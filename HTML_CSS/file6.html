@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Text with Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .parent{
+            border: 1px solid blue;
+            font-size: 20px;
+            width: 40%;
+            height: 500px;
+        }
+        .child{
+            width: 50%;
+            height: 80%;
+            font-size: 2rem;
+            border: 1px solid red;            
+        }
+        .anotherChild{
+            margin: 20px;
+            padding-left: 50px ;
+            width: 60vw;
+            height: 10vh;
+            font-size: 2rem;
+            border: 1px solid violet;            
+        }
+    </style>
+</head>
+<body> 
+    <div class="parent"> This is parent
+       <div class="child">This is child with rem and % width and height</div>  
+       <div class="anotherChild">This is another child with padding and vw</div>
+       This is exit1
+       this is exit2
+    </div>
+</body>
+</html>

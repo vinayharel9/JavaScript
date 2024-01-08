@@ -1,0 +1,33 @@
+
+function myDisplayer(name)
+{
+   console.log(name)
+}
+
+function firstMethod(){
+   myDisplayer('hi');
+}
+
+function secondMethod(){
+    myDisplayer('hello');
+ }
+
+ firstMethod();
+ secondMethod();
+
+ //using callback function 
+ //A callback is a function passed as an argument to another function.
+ //Where callbacks really shine are in asynchronous functions, where one function has to wait for another function (like waiting for a file to load).
+
+ function displaySum(sum)
+ {
+    console.log(sum);
+ }
+
+ function myCalculator(num1, num2, myCallback)
+ {
+    add = num1 + num2;
+    myCallback(add);
+ }
+
+ myCalculator(4,5,displaySum);

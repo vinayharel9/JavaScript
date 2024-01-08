@@ -1,0 +1,11 @@
+{
+    "liveServer.settings.port": 5501,
+    "debugAdapters":[
+    {
+      "type":"vscode-node",
+      "request":"launch",
+      "name":"node"
+    }
+    ]
+
+}

@@ -1,0 +1,5 @@
+//varibale hoisting i.e assigning variable before it is declared
+
+a = 25;
+var a;
+console.log(a);

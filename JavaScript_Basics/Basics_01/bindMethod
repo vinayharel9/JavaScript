@@ -1,0 +1,19 @@
+const person = {
+    firstName : 'xyz',
+    lastName  : 'mno',
+    fullName : function()
+    {
+        return this.firstName + ' ' + this.lastName;
+    }
+}
+
+const person1 = {
+    firstName : 'vinay',
+    lastName  : 'harel'
+}
+
+// Bind the fullName method to person1
+const boundFunction = person.fullName.bind(person1);
+
+// Now invoke the bound function to see the result
+console.log(boundFunction());  // Output: 'vinay harel'
